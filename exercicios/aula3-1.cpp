@@ -13,8 +13,9 @@ int contar_ocorrencias (double *v, int n, double x) {
 }
 
 int main() {
-    int i, n; double v[n];
+    int i, n;
     cout << "N: "; cin >> n;
+    double v[n];
     for (i = 0; i < n; i++) cin >> v[i];
     contar_ocorrencias(&v[0], n, 2); 
 }
