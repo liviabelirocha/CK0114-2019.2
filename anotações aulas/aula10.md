@@ -40,8 +40,8 @@ using std::nothrow;
 
 template <typename T>
 struct Pilha {
-    T *v;
-    int ult, tam_v;
+    T *v; T *w;
+    int ult, tam_v, tam_w;
 
     bool inicializar() {
         v = new(nothrow) T [1];
@@ -82,10 +82,10 @@ struct Pilha {
         ult -= 1;
         if ( !vazia() && 4*(ult+1) <= tam_v ) {
             if ( redimensionar(tam_v/2) ) return true;
+            delete [] v;
+            v = w;
+            tam_v = tam_w;
         }
-        delete [] v;
-        v = w;
-        tam_v = tam_w;
         return false;
     }
 };
