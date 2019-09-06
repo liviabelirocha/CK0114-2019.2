@@ -16,9 +16,7 @@ struct Pilha {
 
     void terminar() { delete [] v; }
 
-    bool vazia() {
-        return ( ult == -1 );
-    }
+    bool vazia() { return ( ult == -1 ); }
 
     //Pré-condição: pilha não vazia
     T topo() { return v[ult]; }
@@ -28,6 +26,9 @@ struct Pilha {
         w = new(nothrow) T [tam_w];
         if ( w == nullptr ) return true;
         for (int i; i <= ult; i += 1) w[i] = v[i];
+        delete [] v;
+        v = w;
+        tam_v = tam_w;
         return false;
     }
 
@@ -45,9 +46,6 @@ struct Pilha {
         ult -= 1;
         if ( !vazia() && 4*(ult+1) <= tam_v ) {
             if ( redimensionar(tam_v/2) ) return true;
-            delete [] v;
-            v = w;
-            tam_v = tam_w;
         }
         return false;
     }
