@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../implementações/pilha.cpp"
+#include "../../implementações/pilha.hpp"
 
 using std::cin;  using std::cout;
 

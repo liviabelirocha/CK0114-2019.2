@@ -1,7 +1,7 @@
 #include <iostream>
 using std::cin; using std::cout;
 
-#include "fila.cpp"
+#include "fila.hpp"
 
 int main () {
     Fila<double> F;

@@ -1,6 +1,6 @@
 #! /bin/bash
 
-./main
+./main.out
 
 RET=$?
 
