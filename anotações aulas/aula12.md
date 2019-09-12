@@ -1,4 +1,4 @@
-#Aula 12 - 06/09/2019
+# Aula 12 - 06/09/2019
 
 #Conjuntos Dinâmicos
 

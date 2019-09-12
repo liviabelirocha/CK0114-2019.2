@@ -1,6 +1,6 @@
-#Aula 10 - 02/09/2019
+# Aula 10 - 02/09/2019
 
-#Pilha via Vetor
+# Pilha via Vetor
 
 1. Um exemplo de uso:
 

@@ -1,4 +1,4 @@
-#O TAD Fila
+# O TAD Fila
 
 1. Introdução: uma fila é, assim como uma pilha, um contêiner, de forma que elementos podem nela ser inseridos e removidos. A diferença essencial entre as duas é que, enquanto numa pilha a operação de remoção remove o último elemento inserido, numa fila a remoção retira o primeiro elemento inserido (dentre aqueles ainda presentes na estrutura).
 
