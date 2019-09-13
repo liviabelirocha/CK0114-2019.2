@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../implementações/conjunto.hpp"
+#include "../../implementações/resize/conjunto.hpp"
 using std::string; using std::cout; using std::cin;
 
 int main () {
@@ -8,7 +8,7 @@ int main () {
     char c;
     double num;
     do {
-        cout << "\nOperações: i (inserir), (r) remover, (p) pertence, (s) parar: " ; cin >> c;
+        cout << "\nOperações: i (inserir), (r) remover, (p) pertence, (s) parar, (m) mostrar elementos: " ; cin >> c;
         cout << '\n';
         switch (c) {
             case 'i':
@@ -32,6 +32,14 @@ int main () {
                 if (C.pertence(num)) cout << "Esse número pertence ao conjunto. \n";
                 else cout << "Esse número não pertence ao conjunto. \n";
                 break;
+
+            //Exercício 1 da Aula 14
+            case 'm':
+                cout << "Mostrando conjunto... \n";
+                auto fim = C.fim();
+                for (auto i = C.inicio(); i != fim; ++i) cout << ' ' << *i;
+                break;
         }
     } while (c != 's');
+    
 }

@@ -4,7 +4,7 @@ using namespace std;
 
 template <typename T>
 struct Deque {
-    T *v; T* w;
+    T *v;
     int left, right, size, elements;
 };
 
