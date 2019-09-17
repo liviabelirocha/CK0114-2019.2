@@ -27,16 +27,25 @@ struct Pilha {
 
     T desempilhar() {
         T elem = topo->elem;
+        Noh *n = topo;
         topo = topo->prox;
+        delete n;
         return elem;
     }
 
     void terminar() {
         while (topo != nullptr) {
-            Noh *n;
-            n = topo->prox;
-            free(topo);
-            topo = n;
+            Noh *n = topo;
+            topo = topo->prox;
+            delete n;
         }
     }
+
+    /*
+    void terminar() {
+        while (!vazia()) {
+            desempilhar();
+        }
+    }
+    */
 };

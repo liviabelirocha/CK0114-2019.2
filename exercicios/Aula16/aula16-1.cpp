@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../implementações/lista_encadeada/pilha.hpp"
+#include "aula16-1.hpp"
 using namespace std;
 
 int main () {
@@ -8,7 +8,7 @@ int main () {
     char c;
     double num;
     do {
-        cout << "\nOperações: (e) empilhar, (d) desempilhar, (t) topo, (v) vazia, (p) parar: " ; cin >> c; cout << '\n';
+        cout << "\nOperações: (e) empilhar, (d) desempilhar, (t) topo, (v) vazia, (p) parar, (n) número de elementos: " ; cin >> c; cout << '\n';
         switch (c) {
             case 'e': {
                 cout << "Insira o número a ser inserido: "; cin >> num;
@@ -23,12 +23,16 @@ int main () {
 
             case 't': {
                 if (P.vazia()) cout << "ERRO! Pilha vazia!\n";
-                else cout << "Topo da pilha: " << (P.topo)->elem << endl;
+                else cout << "Topo da pilha: " << P.consultarTopo() << endl;
             } break;
 
             case 'v': {
                 if (P.vazia()) cout << "Pilha vazia \n";
                 else cout << "Pilha não vazia \n";
+            } break;
+
+            case 'n': {
+                cout << "A pilha tem " << P.numElements() << " elementos. \n";
             } break;
             
         }

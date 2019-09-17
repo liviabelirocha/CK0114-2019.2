@@ -3,8 +3,8 @@ using std::nothrow;
 
 template <typename T>
 struct Pilha {
-    T *v; T *w;
-    int ult, tam_v, tam_w;
+    T *v;
+    int ult, tam_v;
 
     bool inicializar() {
         v = new(nothrow) T [1];
@@ -23,7 +23,7 @@ struct Pilha {
 
     //Pré-condição: ult+1 <= tam_w 
     bool redimensionar(int tam_w) {
-        w = new(nothrow) T [tam_w];
+        T *w = new(nothrow) T [tam_w];
         if ( w == nullptr ) return true;
         for (int i; i <= ult; i += 1) w[i] = v[i];
         delete [] v;

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-g++ -Wall -Wextra -pedantic -std=c++17 -o main.out aula15-2.cpp
+g++ -Wall -Wextra -pedantic -std=c++17 -o main.out aula16-1.cpp
 
 RET=$?
 
