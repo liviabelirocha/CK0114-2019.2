@@ -21,13 +21,14 @@ struct Dicionario {
     bool vazio() { return (ult == -1); }
 
     Par<bool, TD> procurar(TC c) {
-        Par<bool, TD> p;
-        for (int i = 0; i <= ult; i += 1) {
-            if (v[i].x = c) {
+        for (int i = 0; i <= ult; ++i) {
+            if (v[i].x == c) {
+                Par<bool, TD> p;
                 p.x = true; p.y = v[i].y;
                 return p;
             }
         }
+        Par<bool, TD> p;
         p.x = false; 
         return p;
     }
@@ -35,7 +36,7 @@ struct Dicionario {
     bool redimensionar (int tam_w) {
         Par<TC, TD> *w = new(nothrow) Par<TC, TD> [tam_w];
         if ( w == nullptr ) return true;
-        for (int i; i <= ult; i += 1) w[i] = v[i];
+        for (int i = 0; i <= ult; i += 1) w[i] = v[i];
         delete [] v;
         v = w;
         tam_v = tam_w;
@@ -49,7 +50,7 @@ struct Dicionario {
             r.x = true; //c pertence a D
             return r;
         }
-        if (ult = tam_v-1) {
+        if (ult == tam_v-1) {
             if (redimensionar(tam_v*2)) {
                 r.x = false; r.y = true;
                 return r;
