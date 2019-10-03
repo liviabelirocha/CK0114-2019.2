@@ -23,7 +23,7 @@ struct Fila {
         Noh *n = new(nothrow) Noh;
         if (n == nullptr) return true;
         n->prox = nullptr; n->elem = e;    //passa nulo para o ponteiro prox e passa "e" para elem
-        if (vazia()) inicio = fim = n;    //se a fila está vazia, inicio e fim são nulos
+        if (vazia()) inicio = fim = n;    //se a fila está vazia, inicio e fim apontam para n
         else { fim->prox = n; fim = n; } //senão, o ponteiro prox recebe o novo nó, depois fim recebe o mesmo
         return false;
     }

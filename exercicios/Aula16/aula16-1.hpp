@@ -57,5 +57,4 @@ struct Pilha {
     void terminar() {
         while (!vazia()) desempilhar();
     }
-
 };

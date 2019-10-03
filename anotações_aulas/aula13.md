@@ -1,6 +1,6 @@
 # Aula 13 - 09/09/2019
 
-#Iteradores
+# Iteradores
 
 1. O ponteiro this: dentro de uma função membro, a expressão this denota um ponteiro para a estrutura a partir da qual a função foi chamada. Exemplo:
 
