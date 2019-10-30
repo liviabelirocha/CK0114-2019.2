@@ -20,7 +20,7 @@ struct Conjunto {
     struct Iterator {
         Noh *p;
         bool operator!=(Iterator j) { return p != j.p; }
-        bool operator==(Iterator j) { return p == j.p; };
+        bool operator==(Iterator j) { return p == j.p; }
         T operator*() { return p->elem; }
         void operator++() { p = p->prox; };
     };
@@ -68,10 +68,14 @@ struct Conjunto {
         return fim();
     }
 
-    bool pertence(T e) {
-        if (procurar(e) == fim()) return false;
-        return true;
+    Iterator procurar2(T e) {
+        Noh *look = sentinel.prox;
+        sentinel.elem = e;
+        while(look->elem != e) look = look->prox;
+        Iterator i; i.p = look; return i;
     }
+
+    bool pertence(T e) { return (procurar(e) != fim()); }
 
     void terminar() {
         T remove;
@@ -82,7 +86,15 @@ struct Conjunto {
             remover(i);
         }
     }
-};
 
+    void terminar2() {
+        Noh *n = sentinel.prox;
+        while (n != &sentinel) {
+            Noh *ant = n;
+            n = n->prox;
+            delete ant;
+        }
+    }
+};
 
 #endif
