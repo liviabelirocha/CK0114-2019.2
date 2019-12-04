@@ -5,10 +5,14 @@
 1. Observações sobre o Método da Divisão:<br>
     a) Se `m=2^p`, para algum p (ou seja, m potência de 2), então nem todos os `w` bits da chave serão usados: só serão os `p` bits menos significativos.<br>
     **01011100**
+
+
     |multiplo de 2^4|resto |
     |---------------|------|
     |0101           |1100  |
     |são ignorados  |usados|
+
+    
     **p = 4, w = 8**
     <br>Essa situação tende a ser ruim, pois os `w - p` bits mais à esquerda poderiam ajudar a fornecer variação entre as chaves.<br>
     b) Além disso, se as chaves e m tiverem um fator comum k, então apenas as posições da tabela que são múltiplo de k serão preenchidas.<br>

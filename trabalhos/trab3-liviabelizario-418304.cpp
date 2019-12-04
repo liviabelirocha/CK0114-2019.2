@@ -1,18 +1,8 @@
-#ifndef TRABALHO3_HPP
-#define TRABALHO3_HPP
-
 #include <new>
 #include <iostream>
 using namespace std;
 
-struct TD {
-    unsigned int m;
-    void registrar_tam(unsigned int tamTabela) { m = tamTabela; }
-    unsigned int dispersao(unsigned int c) { return c%m; }
-};
-
-//template <typename TC, typename TV, typename TD>
-template <typename TC, typename TV>
+template <typename TC, typename TV, typename TD>
 struct DicioDisp {
     
     struct node {
@@ -29,14 +19,14 @@ struct DicioDisp {
         if (v == nullptr) return true;
         numElem = 0; vecSize = 2;
         table.registrar_tam(vecSize);
-        v[0] = nullptr;
+        v[0] = v[1] = nullptr;
         return false;
     }
 
     bool redimensionar(int newSize) {
         node** newVec = new(nothrow) node* [newSize];
         if (newVec == nullptr) return true;
-        for(int i = 0; i < newSize; i += 1) newVec[i] = nullptr;
+        for(int i = 0; i < newSize; i++) newVec[i] = nullptr;
 
         table.registrar_tam(newSize);
         node *n, *next;
@@ -130,5 +120,3 @@ struct DicioDisp {
     }
 
 };
-
-#endif

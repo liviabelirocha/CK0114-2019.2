@@ -3,9 +3,9 @@
 ## Tabelas de Dispersão
 
 1. Introdução<br>
-    a. A ideia central é armazenas uma chave numa posição de vetor que guarde alguma relação com a chave, e não numa posição puramente circunstancial. Mais especificamente, nś desejamos **calcular** a posição a partir da chave.<br>
+    a. A ideia central é armazenar uma chave numa posição de vetor que guarde alguma relação com a chave, e não numa posição puramente circunstancial. Mais especificamente, nós desejamos **calcular** a posição a partir da chave.<br>
     b. Tecnicamente, nós chamamos o mapeamento das chaves nas posições do vetor de `função de dispersão`. 
-    Um exemplo simoles é o `método da divisão`: se a chave é um número natural c e o vetor (tabela) possui `m` posições, então a posição de "c" é `h(c) = c % m` "h" de "**hash** function").
+    Um exemplo simples é o `método da divisão`: se a chave é um número natural c e o vetor (tabela) possui `m` posições, então a posição de "c" é `h(c) = c % m` "h" de "**hash** function").
     <br>
 2. Observações sobre o tipo das chaves:<br>
     a. Muitas vezes, as chaves já são números naturais (como o CPF). 
